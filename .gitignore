@@ -1,3 +1,6 @@
+# Temporary folders
+bin
+
 # Prerequisites
 *.d
 
