@@ -22,11 +22,6 @@ void serializeValue(const char value[])
     std::cout << "string : " << value;
 }
 
-// template <int N> void serializeValue(const char(&value)[N])
-// {
-//     std::cout << "string : " << value;
-// }
-
 template <typename T, typename... Args> void serializeValues(const T& value, const Args&... args)
 {
     serializeValue(value);

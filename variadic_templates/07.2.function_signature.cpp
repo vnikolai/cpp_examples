@@ -10,8 +10,8 @@ class Functor< Ret( Args... ) >
 
 int main(int argc, const char** argv)
 {
-    Functor <void()> f;
-    Functor <void(int, float)> f2;
+    Functor <void()>();
+    Functor <void(int, float)>();
 
     return 0;
 }

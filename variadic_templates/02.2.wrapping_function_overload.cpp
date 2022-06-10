@@ -33,7 +33,7 @@ template <typename... Args> void handler(Args... args)
 int main(int argc, const char** argv)
 {
     handler(5);
-    handler(0.7, 'a');
+    handler(0.7f, 'a');
 
     std::cout << std::endl;
 

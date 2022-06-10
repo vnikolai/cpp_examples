@@ -2,7 +2,7 @@
 
 struct A
 {
-    template< typename... Args > A(Args...) { std::cout << __PRETTY_FUNCTION__ << std::endl; }
+    template< typename... Args > A(Args...) { std::cout << FUNCTION_SIGNATURE << std::endl; }
 };
 
 struct Factory
@@ -27,7 +27,7 @@ int main(int argc, const char** argv)
 {
     Factory f;
     f.construct(1);
-    f.construct(1.1, 1.2);
+    f.construct(1.1f, 1.2f);
     f.construct("mystring");
 
     return 0;

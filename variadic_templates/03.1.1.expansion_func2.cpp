@@ -3,7 +3,7 @@
 template<typename T>
 void func(T value)
 {
-    std::cout << __PRETTY_FUNCTION__ << " " << value << std::endl; 
+    std::cout << FUNCTION_SIGNATURE << " " << value << std::endl; 
 }
 
 template <typename T, typename... Args>

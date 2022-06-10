@@ -2,7 +2,7 @@
 #include <map>
 #include <tuple>
 
-#define PRINT_FUNCTION std::cout << __PRETTY_FUNCTION__ << std::endl
+#define PRINT_FUNCTION std::cout << FUNCTION_SIGNATURE << std::endl
 
 struct A
 {

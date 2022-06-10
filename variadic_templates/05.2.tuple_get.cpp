@@ -13,10 +13,10 @@ int main(int argc, const char** argv)
               << std::get<1>(t) << " "
               << std::get<2>(t) << std::endl;
 
-    std::pair<float, float> p {2.2, 3.7};
+    std::pair<float, float> p {2.2f, 3.7f};
     std::cout << std::get<1>(p) << std::endl;
 
-    std::array<float, 3> a {2.2, 3.7, 4.4};
+    std::array<float, 3> a {2.2f, 3.7f, 4.4f};
     std::cout << std::get<2>(a) << std::endl;
 
     return 0;
