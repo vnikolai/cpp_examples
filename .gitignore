@@ -1,5 +1,7 @@
 # Temporary folders
 bin
+out
+build
 
 # Prerequisites
 *.d
@@ -33,3 +35,7 @@ bin
 *.exe
 *.out
 *.app
+
+# IDE
+.vs
+.vscode
