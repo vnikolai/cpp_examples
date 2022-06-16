@@ -10,7 +10,7 @@ int main(int argc, const char** argv)
 {
     std::jthread t(print_thread_id);
 
-    std::jthread(
+    std::jthread t2(
         [](){
             print_thread_id();
         });
