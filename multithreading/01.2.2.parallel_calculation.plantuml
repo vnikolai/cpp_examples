@@ -1,0 +1,36 @@
+@startuml
+
+concise Thread1
+concise Thread2
+concise Main
+
+Main is "Generate random" #LightGray
+scale 100 as 200 pixels
+
+@100
+
+Main is average_single_threaded #Yellow
+
+@250
+
+Main is average_multi_threaded #Cyan
+Main -> Thread1 : create
+Main -> Thread2 : create
+
+Thread1 is calculating #Yellow
+Thread2 is calculating #Yellow
+
+Main@100 <-> @250 : Average 67 ms
+
+@350
+
+Thread1 -> Main : join
+Thread2 -> Main : join
+
+Main is {hidden}
+Thread1 is {hidden}
+Thread2 is {hidden}
+
+Thread1@250 <-> @350 : Average 47 ms
+
+@enduml
