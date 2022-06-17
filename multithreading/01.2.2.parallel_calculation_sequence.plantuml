@@ -1,0 +1,27 @@
+@startuml
+
+participant Main
+participant Thread1
+participant Thread2
+
+activate Main
+Main -> Main : generate random
+Main -> Main : average_single_threaded
+Main -> Main : average_multi_threaded
+
+Main -> Thread1 : create
+activate Thread1
+
+Main -> Thread2 : create
+activate Thread2
+
+Thread1 -> Thread1 : calculating
+Thread2 -> Thread2 : calculating
+
+
+Thread1 -> Main : join
+deactivate Thread1
+Thread2 -> Main : join
+deactivate Main
+
+@enduml
