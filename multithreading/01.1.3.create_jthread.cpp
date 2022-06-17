@@ -1,5 +1,6 @@
 #include <iostream>
 #include <thread>
+#include <functional>
 
 void print_thread_id()
 {
@@ -14,6 +15,9 @@ int main(int argc, const char** argv)
         [](){
             print_thread_id();
         });
+
+    std::function<void(void)> f(print_thread_id);
+    std::jthread t3(f);
 
     print_thread_id();
 
