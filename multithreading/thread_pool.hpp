@@ -7,7 +7,7 @@
 #include <thread>
 #include <functional>
 
-const int num_threads = 8;
+const int num_threads = std::thread::hardware_concurrency();
 const auto timeout = std::chrono::microseconds(10);
 
 class thread_pool
