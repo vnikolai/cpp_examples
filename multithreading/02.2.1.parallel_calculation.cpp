@@ -51,7 +51,7 @@ int average_multi_threaded(const std::vector<int>& array)
 
 int main(int argc, const char** argv)
 {
-    const int data_size = 1024*1024 * 256;
+    const int data_size = 1024 * 1024 * 256;
     std::vector<int> data(data_size);
 
     for (int i = 0; i < data_size; ++i)
