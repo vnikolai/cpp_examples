@@ -1,0 +1,30 @@
+@startuml
+
+concise Thread1
+concise Main
+
+Main is "Idle" #LightGray
+scale 100 as 50 pixels
+
+@100
+
+Main is "smaller work" #Yellow
+Main -> Thread1 : create
+Thread1 is work #Yellow
+
+@600
+
+Main is waiting #Cyan
+
+@1100
+Thread1 is cleanup
+Thread1 -> Main : notify
+Main is Finalize
+
+@1250
+Thread1 -> Main : join
+
+Main is {hidden}
+Thread1 is {hidden}
+
+@enduml
