@@ -1,10 +1,12 @@
 #include <iostream>
 #include <thread>
 #include <list>
+#include <mutex>
 
 bool quit = false;
 
 std::list<int> data;
+std::mutex mutex;
 
 void calculate_thread()
 {
@@ -13,8 +15,12 @@ void calculate_thread()
     {
         ++counter;
 
+        mutex.lock();
+
         data.push_back(counter);
         data.pop_front();
+
+        mutex.unlock();
     }
 }
 
@@ -23,12 +29,16 @@ void print_thread()
     int counter = 0;
     while (!quit)
     {
+        mutex.lock();
+
         std::cout << "count = " << data.size() << std::endl;
 
         for (auto d : data)
         {
             std::cout << d << " ";
         }
+
+        mutex.unlock();
 
         std::cout << std::endl;
 

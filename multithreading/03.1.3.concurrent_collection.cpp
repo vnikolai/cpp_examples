@@ -1,7 +1,6 @@
 #include <iostream>
 #include <thread>
 #include <map>
-#include <algorithm>
 
 std::map<int, std::string> data;
 bool quit = false;
