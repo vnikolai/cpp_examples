@@ -19,7 +19,7 @@ int main(int argc, const char** argv)
                 std::cout << "Hello " << "multithreading " << "world!!! " << std::this_thread::get_id() << std::endl;
                 cout_mutex.unlock();
                 
-                std::this_thread::sleep_for(std::chrono::milliseconds(300));
+                std::this_thread::sleep_for(std::chrono::milliseconds(500));
             }
         });
     }

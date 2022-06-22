@@ -14,7 +14,6 @@ void print_thread_id()
     std::this_thread::sleep_for(std::chrono::microseconds(100));
 }
 
-
 int main(int argc, const char** argv)
 {
     thread_pool pool;

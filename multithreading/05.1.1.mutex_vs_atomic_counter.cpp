@@ -57,8 +57,6 @@ void counter_with_atomic_operation()
     bool end = false;
     std::atomic<int> counter = 0;
 
-    const int num_threads = 12;
-
     std::jthread threads[num_threads];
 
     for (int i = 0; i < num_threads; ++i)

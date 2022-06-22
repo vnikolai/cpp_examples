@@ -27,7 +27,7 @@ int main(int argc, const char** argv)
         semaphore.acquire();
 
         std::cout << "processing previous data block" << std::endl;
-        std::this_thread::sleep_for(std::chrono::microseconds(500));
+        std::this_thread::sleep_for(std::chrono::milliseconds(500));
 
         //quit = true;
     }

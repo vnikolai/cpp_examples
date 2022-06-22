@@ -64,7 +64,6 @@ void multiple_with_lock()
 }
 
 int main(int argc, const char** argv)
-{
-    
+{    
     return 0;
 }
