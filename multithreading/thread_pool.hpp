@@ -8,7 +8,6 @@
 #include <functional>
 
 const int num_threads = std::thread::hardware_concurrency();
-const auto timeout = std::chrono::microseconds(10);
 
 class thread_pool
 {
@@ -104,11 +103,11 @@ private:
         while ( m_running )
         {
             std::unique_lock< std::mutex > guard( m_task_queue_lock );
-            m_task_ready.wait_for( guard, timeout, [&]( ) {
+            m_task_ready.wait( guard, [&]( ) {
                 return !m_task_queue.empty( ) || !m_running;
             } );
 
-            if ( m_running && !m_task_queue.empty( ) )
+            if ( m_running )
             {
                 std::function<void(void)> task;
                 if ( fetch_task( task ) )
