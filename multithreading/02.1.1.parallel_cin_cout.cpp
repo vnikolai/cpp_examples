@@ -1,5 +1,6 @@
 #include <iostream>
 #include <thread>
+#include <chrono>
 
 bool quit = false;
 
@@ -41,7 +42,7 @@ int main(int argc, const char** argv)
 
     while (!quit)
     {
-        std::cout << "working " << std::chrono::system_clock::now() << std::endl;
+        std::cout << "working " << std::time({}) << std::endl;
         std::this_thread::sleep_for(delay);
     }
 

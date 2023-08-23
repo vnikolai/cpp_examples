@@ -1,5 +1,6 @@
 #include <iostream>
 #include <thread>
+#include <stop_token>
 
 void infinite_loop(std::stop_token token)
 {
