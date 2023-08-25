@@ -24,3 +24,4 @@ endfunction()
 
 build_examples("variadic_templates")
 build_examples("multithreading")
+build_examples("std")
